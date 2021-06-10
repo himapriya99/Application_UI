@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TFS Compliance Automation Report</title>
+      </head>
+<body>
+<form action = "" method = "POST">
+    {% csrf_token %}
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'initial/styles.css' %}" />
+    <div>
+    <h1 class="heading">TFS Compliance Report</h1><br><br>
+    <label for="Release">Release   </label>
+    <input id="Release" type="text" name="Release"><br>
+    <input type="checkbox" name="checks[]" value="Scope Lock" />Scope Lock <br>
+    <input type="checkbox" name="checks[]" value="Code Lock" />Code Lock<br><br>
+    <button type="submit">Submit</button>
+    </div>
+</form>
+</body>
+</html>

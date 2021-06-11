@@ -1,3 +1,47 @@
 .block1{
     text-align: center;
 }
+.header{
+    background-color: rgb(0, 102, 204); 
+    border-radius: 8px;
+    justify-content: center;
+    text-align: center;
+    width: 1250px;
+    height: 40px;
+}
+.label1{
+    background-color: rgb(0, 102, 204) ;
+    border-radius: 4px;
+    font-size: 0.65cm;
+    font-weight: bolder;
+    width: 200px;
+    height: 28px;
+    display: inline-block;                           
+
+}
+.label2{
+    font-weight: bold;
+}
+.label3{
+     width: 78px;
+     display: inline-block;
+    font-weight: bold;
+}
+.button1{
+    background-color: rgb(0, 102, 204);
+    border-radius: 20px;
+    font-size: medium;
+    font-weight: bold;
+                                 
+}
+.rbutton{
+   width:40px;
+   height:15px;
+}
+.rinput{
+    border-radius: 4px;
+    height: 26px;
+    width: 200px;
+    border-radius: 4px;
+    display: inline-block;
+}

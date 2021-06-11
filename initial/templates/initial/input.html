@@ -8,40 +8,17 @@
 <body>
 <form action = "/submit" method = "POST">
     {% csrf_token %}
-    <h1 style="background-color: rgb(0, 102, 204); 
-                border-radius: 8px;
-                justify-content: center;
-                text-align: center;
-                width: 1250px;
-                height: 40px;">
+    <h1 class = "header">
                 TFS Compliance Automation Report</h1> <br><br><br><br>
-    <div style="text-align: center;">
-    <label for="Release" style="background-color: rgb(0, 102, 204) ;
-                                border-radius: 4px;
-                                 font-size: 0.65cm;
-                                 font-weight: bolder;
-                                 width: 200px;
-                                 height: 28px;
-                                 display: inline-block;">
+    <div class="block1">
+    <label for="Release" class="label1">
                                  Release &nbsp;&nbsp;</label> &nbsp;&emsp;&emsp;
-    <input id="Release" type="text" name="Release" style="border-radius: 4px;
-                                                          height: 26px;
-                                                          width: 200px;
-                                                          border-radius: 4px;
-                                                          display: inline-block;"><br><br>
-  <input type="radio" id="scopelock" name="radiobutton" value="scopelock" style="width:40px;
-                                                                                height:15px;">
-  <label for="scopelock" style="font-weight: bold;">Scope Lock</label><br>
-  <input type="radio" id="codelock" name="radiobutton" value="codelock" style="width:40px;
-                                                                            height:15px;">
-  <label for="codelock" style=" width: 78px;
-                      display: inline-block;
-                     font-weight: bold;">Code Lock</label><br><br>
-    <button type="submit" style="background-color: rgb(0, 102, 204);
-                                 border-radius: 20px;
-                                 font-size: medium;
-                                 font-weight: bold;
-                                 ">Submit</button>
+    <input id="Release" type="text" name="Release" class="rinput"><br><br>
+    <input type="radio" id="scopelock" name="radiobutton" value="scopelock" class="rbutton">
+    <label for="scopelock" class="label2">Scope Lock</label><br>
+    <input type="radio" id="codelock" name="radiobutton" value="codelock" class="rbutton">
+    <label for="codelock" class="label3">Code Lock</label><br><br>
+    <button type="submit" class="button1" >Submit</button>
     </div>
 </form>
 </body>

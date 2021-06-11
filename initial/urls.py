@@ -3,5 +3,5 @@ from . import views
 
 urlpatterns = [
       path('', views.input, name="input"),
-       #path('home', views.addlogic, name="logic"),
+      path('submit', views.submit, name="submit"),
 ]

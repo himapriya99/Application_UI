@@ -7,11 +7,13 @@ def input (request):
 
 def submit(request):
     data = {}
+    table=[]
     if request.method == "POST":
         release = str(request.POST.get('Release'))
         lock = request.POST.get('radiobutton')
         data['release'] = release
         data['lock'] = lock
+        data['t'] = table
         print(release)
         print(lock)
         #getting all stories from tfs using release into DB

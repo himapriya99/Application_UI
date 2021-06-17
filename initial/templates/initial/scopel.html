@@ -48,6 +48,19 @@
                 <td>CH0152349</td>
                 <td>1024567</td>
             </tr>
+            <!--  dynamically getting values from Views -->
+            {% if d %}  
+            {% for i in d %}
+              <tr>
+                <td>{{i.id}}</td>
+                <td>{{i.assignee}}</td>
+                <td>{{i.workitem}}</td>
+                <td>{{i.state}}</td>
+                <td>{{i.crq}}</td>
+                <td>{{i.rwi}}</td>
+              </tr>
+            {% endfor %}
+            {% endif %}
         </tbody>
     </table>
 </body>

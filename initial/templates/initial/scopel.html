@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        {% load static %}
+        <link rel="stylesheet" type="text/css" href="{% static 'initial/styles1.css' %}" />
+        <title>Release Management Dashboard</title>
+    </head>
+<body>
+    <form action = "/scope_alert" method = "POST">
+        {% csrf_token %}
+        <br><br>
+        <button type="submit" class="alert_button">Alert for Scopelock</button>
+    </form><br>
+    <table class ="table_css">
+        <caption>Stories Tagged for {{release}} release {{lock}}</caption>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Assigned To</th>
+                <th>Work ItemType</th>
+                <th>State</th>
+                <th>CRQ</th>
+                <th>RWI</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>123456</td>
+                <td>Himapriya Tammineedi</td>
+                <td>Story</td>
+                <td>In development</td>
+                <td>CH0152349</td>
+                <td>1024567</td>
+             </tr>
+             <tr>
+                <td>123456</td>
+                <td>Himapriya Tammineedi</td>
+                <td>Story</td>
+                <td>In development</td>
+                <td>CH0152349</td>
+                <td>1024567</td>
+            </tr>
+            <tr>
+                <td>123456</td>
+                <td>Himapriya Tammineedi</td>
+                <td>Story</td>
+                <td>In development</td>
+                <td>CH0152349</td>
+                <td>1024567</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

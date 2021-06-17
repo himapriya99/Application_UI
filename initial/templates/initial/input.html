@@ -3,13 +3,13 @@
     <head>
         {% load static %}
         <link rel="stylesheet" type="text/css" href="{% static 'initial/styles.css' %}" />
-        <title>TFS Compliance Automation Report</title>
+        <title>Release Management Dashboard</title>
     </head>
 <body>
 <form action = "/submit" method = "POST">
     {% csrf_token %}
     <h1 class = "header">
-                TFS Compliance Automation Report</h1> <br><br><br><br>
+                Release Management Dashboard</h1> <br><br><br><br>
     <div class="block1">
     <label for="Release" class="label1">
                                  Release &nbsp;&nbsp;</label> &nbsp;&emsp;&emsp;

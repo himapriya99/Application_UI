@@ -7,7 +7,7 @@ def input (request):
 
 def submit(request):
     data = {}
-    table=[]
+    table=[]# get data into table variable from models ex: table = <Model_name>.objects.all()
     if request.method == "POST":
         release = str(request.POST.get('Release'))
         lock = request.POST.get('radiobutton')
@@ -26,7 +26,7 @@ def submit(request):
 
 def scope_alert(request):
     #validations and email code for scope lock
-    return render(request, "initial/input.html")# popup page
+    return HttpResponse('scopelock')#popup page
 
 def code_alert(request):
     #validations and email code for code lock

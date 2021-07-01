@@ -4,35 +4,10 @@
     font-size: medium;
     font-weight: bold;
     width: 200px;
-    height:30px
+    height:30px;
+    float: left;
 }
-table{
-    font-family: arial, sans-serif;
-    border: 1px solid black;
-    border-collapse: collapse;
-    width: 80%;
-    margin-left: auto;
-    margin-right: auto;
-}
-caption{
-    font-size: large;
-    font-weight: bold;
-}
-th{
-    background-color:rgb(149, 197, 245);
-    border: 1px solid black;
-    border-collapse: collapse;
-    padding: 5px;
-    text-align: left;
-}
-td{
-    border: 1px solid black;
-    border-collapse: collapse;
-    padding:5px;
-}
-tr:nth-child(even) {
-    background-color: rgb(220, 230, 241);
-  }
+
 .back_button{
     background: none;
     border: none;
@@ -42,4 +17,48 @@ tr:nth-child(even) {
 	cursor: pointer;
 	outline: inherit;
     font-size: xx-large;
+}
+#t01{
+    font-family: arial, sans-serif;
+    border: 1px solid black;
+    border-collapse: collapse;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+#t01 caption{
+    font-size: large;
+    font-weight: bold;
+}
+#t01 th{
+    background-color:rgb(149, 197, 245);
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 5px;
+    text-align: left;
+}
+#t01 td{
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding:5px;
+}
+#t01 tr:nth-child(even) {
+    background-color: rgb(220, 230, 241);
+  }
+
+#t02{
+    border-collapse: collapse;
+    border-width: 0in;
+    border-color: #ffffff;
+    margin-left: 80%;
+    margin-right: 0;
+}
+#t02 th{
+    border-collapse: collapse;
+    padding: 5px;
+    text-align: left;
+}
+#t02 td{
+    border-collapse: collapse;
+    padding:5px;
 }

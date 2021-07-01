@@ -4,19 +4,26 @@ from django.http import HttpResponse
 from django.contrib import messages
 # Create your views here.
 data = {}
-data['message'] = None
 def input (request):  
     return render( request, "initial/input.html")
 
 def submit(request):
     #data = {}
     table=[]# get data into table variable from models ex: table = <Model_name>.objects.all()
+    sap_rwi = '10796272'
+    myq_rwi = '10722773'
+    sap_crq = 'CHG0363605'
+    myq_crq = 'CHG0363606'
     if request.method == "POST":
         release = str(request.POST.get('Release'))
         lock = request.POST.get('radiobutton')
         data['release'] = release
         data['lock'] = lock
         data['t'] = table
+        data['sap_rwi'] = sap_rwi
+        data['myq_rwi'] = myq_rwi
+        data['sap_crq'] = sap_crq
+        data['myq_crq'] = myq_crq
         print(release)
         print(lock)
         #getting all stories from tfs using release into DB
@@ -28,11 +35,6 @@ def submit(request):
        return render( request, "initial/input.html")
 
 def scope_alert(request):
-    #validations and email code for scope lock
-   # return HttpResponse('scopelock')#popup page
-   
-     #return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
-     #return redirect(request,"initial/scopel.html",context)
      return render(request,"initial/pop.html",data)
 
 def code_alert(request):

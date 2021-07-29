@@ -3,13 +3,27 @@
 <head>
         {% load static %}
         <link rel="stylesheet" type="text/css" href="{% static 'initial/styles1.css' %}" />
+
         <title>Release Management Dashboard</title>
 </head>
 <body>
-    <input  id = "back_button" type="button" value=" &#8592 " class="back_button" >
+   
+    <!--<input  id = "back_button" type="button" value=" &#8592 " class="back_button" >-->
+    <form action = "/download" method="POST">
+        {% csrf_token %}
+    <header>
+        <br>
+         <img class="logo" src = "{% static 'initial/images/logo.png' %}" alt="logo"/>  
+         <div class="navbar">
+            <img src="{% static 'initial/images/Home.png' %}" alt="Home" class="icon" onclick="return_page() "/>  
+            <input type="image"src="{% static 'initial/images/download.png' %}" alt="download" class="icon">
+          </div>
+       
+     </header>
+    </form>
     <form action = "/scope_alert" method = "POST">
         {% csrf_token %}
-        <button type="submit" class="alert_button" onclick="show_alert() ">Alert for Scopelock</button>
+        <button type="submit" class="alert_button" onclick="show_alert() ">Alert Scopelock Defaulters</button>
         <table  id="t02">
             <thead>
                 <tr>
@@ -61,14 +75,7 @@
                 <td>CH0152349</td>
                 <td>1024567</td>
             </tr>
-            <tr>
-                <td>123456</td>
-                <td>Himapriya Tammineedi</td>
-                <td>Story</td>
-                <td>In development</td>
-                <td>CH0152349</td>
-                <td>1024567</td>
-            </tr>
+            
             <!--  dynamically getting values from Views -->
             {% if t %}  
             {% for i in t %}
@@ -95,6 +102,11 @@
     };
     function show_alert() {
             confirm('Alert users of scope lock');
+           // alert("Email Alert has been sent to the users");
         }
+    function return_page() {
+               location.href = '/';
+        }
+
 </script>
 </html>

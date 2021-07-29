@@ -5,7 +5,11 @@ from django.contrib import messages
 # Create your views here.
 data = {}
 def input (request):  
-    return render( request, "initial/input.html")
+    data = {}
+    rel_target = [{"release": "FW22-FW15-0802"},{"release": "FW22-FW17-0804"}]
+    data['r'] = rel_target
+    print(data)
+    return render( request, "initial/input.html",data)
 
 def submit(request):
     #data = {}
@@ -26,6 +30,7 @@ def submit(request):
         data['myq_crq'] = myq_crq
         print(release)
         print(lock)
+        print(data)
         #getting all stories from tfs using release into DB
     if data['lock'] == "scopelock":
        return render(request, "initial/scopel.html", data)
@@ -35,10 +40,18 @@ def submit(request):
        return render( request, "initial/input.html")
 
 def scope_alert(request):
+     alert = '1'
+     data['alert'] = alert
+     alert = '0'
+    # return render(request,"initial/scopel.html",data)
      return render(request,"initial/pop.html",data)
-
 def code_alert(request):
     #validations and email code for code lock
-    return HttpResponse('codelock')#popup page
+   # return HttpResponse('codelock')#popup page
+   return redirect("code_alert")
+
+def download(request):
+    
+    return redirect(request. META['HTTP_REFERER']) 
 
 

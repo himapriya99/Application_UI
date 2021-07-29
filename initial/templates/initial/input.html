@@ -3,17 +3,32 @@
     <head>
         {% load static %}
         <link rel="stylesheet" type="text/css" href="{% static 'initial/styles.css' %}" />
-        <title>Release Management Dashboard</title>
+        <title>Release Management Control Panel</title>
     </head>
 <body>
 <form action = "/submit" method = "POST">
     {% csrf_token %}
-    <h1 class = "header">
-                Release Management Dashboard</h1> <br><br><br><br>
+    <header>
+       <br>
+        <img class="logo" src = "{% static 'initial/images/logo.png' %}" alt="logo"/><br>
+                                                                                                 
+      <h1 class = "header" >
+                Release Alert and Monitoring System(RAMS)</h1> 
+    </header><br><br><br><br>
     <div class="block1">
     <label for="Release" class="label1">
-                                 Release &nbsp;&nbsp;</label> &nbsp;&emsp;&emsp;
-    <input id="Release" type="text" name="Release" class="rinput"><br><br>
+                                 Release &nbsp;&nbsp;</label> &nbsp;
+    <!--<select id="Release" name="Release"  class="rinput">-->
+     <input list="Release" name="Release" class="rinput">
+     <datalist id="Release">
+     {% if r %}  
+     {% for i in r %}
+        <option value="{{i.release}}">{{i.release}}</option>
+     {% endfor %}
+     {% endif %}
+    </datalist> <br><br>
+    <!--</select>      <br><br> -->                     
+    <!--<input id="Release" type="text" name="Release" class="rinput"><br><br>-->
     <input type="radio" id="scopelock" name="radiobutton" value="scopelock" class="rbutton">
     <label for="scopelock" class="label2">Scope Lock</label><br>
     <input type="radio" id="codelock" name="radiobutton" value="codelock" class="rbutton">

@@ -1,37 +1,71 @@
+body{
+    background-image: url("images/b1.jpeg");
+    background-blend-mode: soft-light;
+    margin-top: 0;
+    margin: 0;
+    margin-left: 0%;
+    margin-right: 0%;
+}
 .block1{
     text-align: center;
 }
 .header{
-    background-color: rgb(0, 102, 204); 
     border-radius: 8px;
     justify-content: center;
     text-align: center;
     width: 1250px;
     height: 40px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin: 0;
+    padding: 0px;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-weight: lighter;
+    font: 300;
+    
+    margin-left :6%;
+    margin-right: 0;
+
 }
 .label1{
-    background-color: rgb(0, 102, 204) ;
+    
     border-radius: 4px;
     font-size: 0.65cm;
     font-weight: bolder;
     width: 200px;
     height: 28px;
-    display: inline-block;                           
+    display: inline-block;  
+    color: white;   
+    font-family: 'Roboto', sans-serif;
+    font-weight: lighter;
+    font: 300;                      
 
 }
 .label2{
-    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+    font-weight: lighter;
+    color: white;
+   
 }
 .label3{
-     width: 78px;
+     width: 82.7px;
+     font-family: 'Roboto', sans-serif;
      display: inline-block;
-    font-weight: bold;
+    font-weight: lighter;
+    color: white;
+   
 }
 .button1{
-    background-color: rgb(0, 102, 204);
+    background-color: rgb(0, 118, 206);
     border-radius: 20px;
+    border-color: white;
     font-size: medium;
     font-weight: bold;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-weight: lighter;
+    font: 300;
                                  
 }
 .rbutton{
@@ -40,8 +74,23 @@
 }
 .rinput{
     border-radius: 4px;
-    height: 26px;
     width: 200px;
-    border-radius: 4px;
+    border-color: white;
     display: inline-block;
+    height: 26px;
+    overflow-y :auto; 
+    overflow-x:hidden; 
+}
+.logo{
+    display: inline;
+    height : 9%;
+    width : 17%;
+    margin-left: 5%;
+    margin-right: 0%;
+}
+header{
+    background-color: rgb(0, 118, 206);
+    margin: 0;
+    margin-top: 0;
+    
 }

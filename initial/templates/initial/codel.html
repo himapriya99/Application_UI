@@ -4,14 +4,49 @@
         {% load static %}
         <link rel="stylesheet" type="text/css" href="{% static 'initial/styles1.css' %}" />
         <title>Release Management Dashboard</title>
+        <link rel="icon" href="{% static 'initial/images/dell_logo.png' %}" type="image/icon type">
     </head>
 <body>
+    <form action = "/download" method="POST">
+        {% csrf_token %}
+    <header>
+        <br>
+         <img class="logo" src = "{% static 'initial/images/logo.png' %}" alt="logo"/>  
+         <h1 class = "header" >
+            CodeLock Summary</h1> 
+         <div class="navbar">
+            <img src="{% static 'initial/images/Home.png' %}" alt="Home" class="icon" onclick="return_page() "/>  
+            <input type="image"src="{% static 'initial/images/download.png' %}" alt="download" class="icon">
+          </div>
+       
+     </header>
+    </form>
     <form action = "/code_alert" method = "POST">
         {% csrf_token %}
-        <br><br>
-        <button type="submit" class="alert_button">Alert for Codelock</button>
-    </form>
-    <table class ="table_css">
+        <button type="submit" class="alert_button" onclick="show_alert() ">Alert Codelock Defaulters</button>
+        <table  id="t02">
+            <thead>
+                <tr>
+                    <th> </th>
+                    <th>SAP</th>
+                    <th>Myquotes</th>
+                </tr>
+            </thead>
+            <tbody>
+                 <tr>
+                     <th>RWI</th>
+                     <td>{{sap_rwi}}</td>
+                     <td>{{myq_rwi}}</td>
+                 </tr>
+                 <tr>
+                    <th>CRQ</th>
+                    <td>{{sap_crq}}</td>
+                    <td>{{myq_crq}}</td>
+                </tr>
+            </tbody>
+         </table> 
+    </form><br>
+    <table id="t01">
         <caption>Stories Tagged for {{release}} release {{lock}}</caption>
         <thead>
             <tr>
@@ -21,7 +56,6 @@
                 <th>State</th>
                 <th>CRQ</th>
                 <th>RWI</th>
-                <th>Deployment Plan</th>
             </tr>
         </thead>
         <tbody>
@@ -32,7 +66,6 @@
                 <td>In development</td>
                 <td>CH0152349</td>
                 <td>1024567</td>
-                <td>ED276849</td>
              </tr>
              <tr>
                 <td>123456</td>
@@ -41,18 +74,39 @@
                 <td>In development</td>
                 <td>CH0152349</td>
                 <td>1024567</td>
-                <td>ED276849</td>
             </tr>
-            <tr>
-                <td>123456</td>
-                <td>Himapriya Tammineedi</td>
-                <td>Story</td>
-                <td>In development</td>
-                <td>CH0152349</td>
-                <td>1024567</td>
-                <td>ED276849</td>
-            </tr>
+            
+            <!--  dynamically getting values from Views -->
+            {% if t %}  
+            {% for i in t %}
+              <tr>
+                <td>{{i.id}}</td>
+                <td>{{i.assignee}}</td>
+                <td>{{i.workitem}}</td>
+                <td>{{i.state}}</td>
+                <td>{{i.crq}}</td>
+                <td>{{i.rwi}}</td>
+              </tr>
+            {% endfor %}
+            {% endif %}
         </tbody>
     </table>
+
+    {% block popup %}
+    {% endblock %}
 </body>
+
+<script type="text/javascript">
+    document.getElementById("back_button").onclick = function () {
+        location.href = '/';
+    };
+    function show_alert() {
+            confirm('Alert users of scope lock');
+           // alert("Email Alert has been sent to the users");
+        }
+    function return_page() {
+               location.href = '/';
+        }
+
+</script>
 </html>

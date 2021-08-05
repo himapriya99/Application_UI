@@ -40,15 +40,11 @@ def submit(request):
        return render( request, "initial/input.html")
 
 def scope_alert(request):
-     alert = '1'
-     data['alert'] = alert
-     alert = '0'
     # return render(request,"initial/scopel.html",data)
      return render(request,"initial/pop.html",data)
 def code_alert(request):
     #validations and email code for code lock
-   # return HttpResponse('codelock')#popup page
-   return redirect("code_alert")
+     return render(request,"initial/pop.html",data)
 
 def download(request):
     

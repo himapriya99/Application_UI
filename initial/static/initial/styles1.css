@@ -93,7 +93,7 @@ body{
     margin: 0;
     padding: 0px;
     display: inline;
-    margin-left: 60%;
+    margin-left: -5%;
     margin-right: 0%;
    
   }  
@@ -108,6 +108,23 @@ body{
       border-width: 2px;
       border-color: black;
   }
+  .header{
+   
+    width: 1250px;
+    height: 40px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin: 0;
+    padding: 0px;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 20;
+    font: 300;
+    margin-left :15%;
+    margin-right: 30%;
+    display: inline;
+
+}
   @media screen and (max-width: 500px) {
     .navbar a{
       float: none;

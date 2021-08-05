@@ -5,6 +5,7 @@
         <link rel="stylesheet" type="text/css" href="{% static 'initial/styles1.css' %}" />
 
         <title>Release Management Dashboard</title>
+        <link rel="icon" href="{% static 'initial/images/dell_logo.png' %}" type="image/icon type">
 </head>
 <body>
    
@@ -14,6 +15,8 @@
     <header>
         <br>
          <img class="logo" src = "{% static 'initial/images/logo.png' %}" alt="logo"/>  
+         <h1 class = "header" >
+            ScopeLock Summary</h1> 
          <div class="navbar">
             <img src="{% static 'initial/images/Home.png' %}" alt="Home" class="icon" onclick="return_page() "/>  
             <input type="image"src="{% static 'initial/images/download.png' %}" alt="download" class="icon">
@@ -97,9 +100,6 @@
 </body>
 
 <script type="text/javascript">
-    document.getElementById("back_button").onclick = function () {
-        location.href = '/';
-    };
     function show_alert() {
             confirm('Alert users of scope lock');
            // alert("Email Alert has been sent to the users");
@@ -107,6 +107,5 @@
     function return_page() {
                location.href = '/';
         }
-
 </script>
 </html>

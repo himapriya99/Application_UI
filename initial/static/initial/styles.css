@@ -51,17 +51,45 @@ body{
     font-weight: lighter;
     color: white;
     display: inline-flex;
-    align-items: center;
+    
+    
    
 }
 .label3{
-     width: 85px;
+    width: 84px;
      font-family: 'Roboto', sans-serif;
      display: inline-flex;
     font-weight: lighter;
     color: white;
-    align-items: center;
+    
+    
    
+}
+.rbutton1{
+    width:40px;
+    height:15px;
+    vertical-align: baseline;
+    display: table-cell;
+   
+}
+.rbutton2{
+    width:40px;
+    height:15px;
+    vertical-align: baseline;
+    display: table-cell;
+}
+
+.rinput{
+    border-radius: 4px;
+    width: 200px;
+    border-color: white;
+    display: inline-block;
+    height: 26px;
+    overflow-y :auto; 
+    overflow-x:hidden; 
+    margin-bottom: 0%;
+    margin-right: 0%;   
+    margin-left: -5%;  
 }
 .button1{
     background-color: rgb(0, 118, 206);
@@ -74,25 +102,6 @@ body{
     font-weight: lighter;
     font: 300;
                                  
-}
-.rbutton{
-   width:40px;
-   height:15px;
-   vertical-align: baseline;
-   display: table-cell;
-   
-}
-.rinput{
-    border-radius: 4px;
-    width: 200px;
-    border-color: white;
-    display: inline-block;
-    height: 26px;
-    overflow-y :auto; 
-    overflow-x:hidden; 
-    margin-bottom: 0%;
-    margin-right: 0%;   
-    margin-left: -5%;  
 }
 .logo{
     display: inline;
@@ -107,6 +116,7 @@ header{
     margin-top: 0;
     
 }
+
 @media only screen and (max-width: 600px) {
     /* For mobile phones: */
     body {

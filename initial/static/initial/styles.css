@@ -8,6 +8,34 @@ body{
     margin-left: 0%;
     margin-right: 0%;
 }
+a{
+    color: white;
+    margin-top: 5%;
+    margin-left: 90%;
+    margin-right: 0%;
+    font-weight: bolder;
+    font-family: 'Roboto', sans-serif;
+}
+a:link {
+    color: white;
+    width: 100px;
+  }
+  
+  /* visited link */
+  a:visited {
+    color: white;
+  }
+  
+  /* mouse over link */
+  a:hover {
+    color: rgb(0, 118, 206);
+  }
+  
+  /* selected link */
+  a:active {
+    color:rgb(0, 118, 206);
+  }
+
 .block1{
     text-align: center;
 }
@@ -52,7 +80,7 @@ body{
     color: white;
     display: inline-flex;
     
-    
+    vertical-align: baseline;
    
 }
 .label3{
@@ -61,21 +89,20 @@ body{
      display: inline-flex;
     font-weight: lighter;
     color: white;
-    
-    
    
+    vertical-align: baseline;
 }
 .rbutton1{
     width:40px;
     height:15px;
-    vertical-align: baseline;
+    
     display: table-cell;
    
 }
 .rbutton2{
     width:40px;
     height:15px;
-    vertical-align: baseline;
+    
     display: table-cell;
 }
 
